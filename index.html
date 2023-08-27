@@ -4,54 +4,78 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!-- Required Core stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
     <!-- Optional Theme stylesheet -->
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://kit.fontawesome.com/428a1a7321.js" crossorigin="anonymous"></script>
 
     <!-- Owl Carousel Plugin -->
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 
+    <!-- Aos Carousel Plugin -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Typist Plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/htmltypist.js/dist/typist.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+
     <title>Portofolio</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <div class="navbar-brand"><a href="https://www.rpmsystem.me/" target="_self">Daeng one</a></div>
-        <div class="navbar-menu">
-          <!-- <span onclick="openNav()">&#9776;</span> -->
-          <ul class="nav" id="myNavbar">
-            <li class="nav-item">
-              <a class="nav-link" href="#home"><span>Home</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#project"><span>Project</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills"><span>Skills</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#gallery"><span>Gallery</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#aboutme"><span>Description</span></a>
-            </li>
-          </ul>
+        <div class="navbar-brand"><a href="https://www.rpmsystem.me/" target="_self">Lazy Code</a></div>
+        <div id="toggle">
+          <div id="btn-burger"></div>
         </div>
+        <ul class="navbar-menu" id="myNavbar">
+          <li class="nav-item">
+            <a class="nav-link" href="#home"><span>Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project"><span>Project</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills"><span>Skills</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery"><span>Gallery</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme"><span>Description</span></a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
       <div class="content">
         <section class="banner" id="home">
+          <div class="banner-merge">
+            <div class="text">
+              <h1 data-aos="fade-left" data-aos-duration="2000" class="typist" data-typist-delay-type="500" data-typist-delay-end="4000">
+                <span>designer</span>
+                <span>coder's</span>
+              </h1>
+              <p data-aos="fade-left" data-aos-duration="50" class="typist" data-typist-delay-type="10" data-typist-delay-delete="0.5">
+                <span>
+                  UI/UX desainer mampu membuat tampilan aplikasi yang "menarik" tampilan yang dibuat dapat sesuai dengan setiap kalangan usia yang menjadi target pengguna aplikasi, "responsive" mampu menyesuaikan pada screen size dari setiap device pengguna, dan "modern" desain dengan tampilan terbaru dan terkini.
+                </span>
+                <span>
+                  Merancang, Mengelola, dan membuat aplikasi menggunakan bahasa pemrograman dan tools terbaru. mampu menerapkan konsep clean architecture untuk meningkatkan efektivitas kinerja dari sistem yang dibuat.
+                </span>
+              </p>
+            </div>
+          </div>
           <div class="banner-left">
             <div class="text">
-              <h1>designer</h1>
-              <p>
+              <h1 class="typist">
+                <span>designer</span>
+                <span>UI/UX</span>
+              </h1>
+              <p data-aos="fade-right" data-aos-duration="1000">
                 UI/UX desainer mampu membuat tampilan aplikasi yang "menarik" tampilan yang dibuat dapat sesuai dengan setiap kalangan usia yang menjadi target pengguna aplikasi, "responsive" mampu menyesuaikan pada screen size dari setiap device pengguna, dan "modern" desain dengan tampilan terbaru dan terkini.   
               </p>
             </div>
@@ -66,8 +90,11 @@
           </div>
           <div class="banner-right">
             <div class="text">
-              <h1>coder's</h1>
-              <p>
+              <h1 class="typist">
+                <span>developer</span>
+                <span>frelancer</span>
+              </h1>
+              <p data-aos="fade-left" data-aos-duration="1000">
                 Merancang, Mengelola, dan membuat aplikasi menggunakan bahasa pemrograman dan tools terbaru. mampu menerapkan konsep clean architecture untuk meningkatkan efektivitas kinerja dari sistem yang dibuat.
               </p>
             </div>
@@ -83,7 +110,7 @@
               </div>
               <h1 class="text-block">best</h1>
               <div class="section-description">
-                <h1 class="section-description-title">Teknologi yang saya gunakan ?</h1>
+                <h1 class="section-description-title" >Teknologi yang saya gunakan ?</h1>
                 <p class="section-description-text">pengembangan aplikasi website bagian back-end menggunakan Framework Laravel, front-end menggunakan ReactJS. sementara untuk pengembangan aplikasi mobile menggunakan Flutter</h1>
               </div>
             </div>
@@ -106,22 +133,22 @@
           <div class="project-list owl-carousel owl-theme">
             <div class="project-card card-item">
               <div class="card-item-body">
-                <img src="/assets/image/project/1.jpg" alt=""/>
+                <img src="/assets/image/project/1.png" alt=""/>
               </div>
             </div>
             <div class="project-card card-item">
               <div class="card-item-body">
-                <img src="/assets/image/project/2.jpeg" alt=""/>
+                <img src="/assets/image/project/2.png" alt=""/>
               </div>
             </div>
             <div class="project-card card-item">
               <div class="card-item-body">
-                <img src="/assets/image/project/3.jpeg" alt=""/>
+                <img src="/assets/image/project/3.png" alt=""/>
               </div>
             </div>
             <div class="project-card card-item">
               <div class="card-item-body">
-                <img src="/assets/image/project/4.jpeg" alt=""/>
+                <img src="/assets/image/project/4.png" alt=""/>
               </div>
             </div>
           </div>
@@ -130,6 +157,7 @@
           <div class="skill-title">
             <h1 class="section-title-text">skill's</h1>
             <span class="section-title-underline"></span>
+            <p class="section-title-desc">Beberapa skill utama yang saya miliki untuk menunjang kegiatan maupun pekerjaan yang saya lakukan dan berkaitan dengan bidang Teknologi Informasi</p>
           </div>
           <div class="skill-list">
             <div class="skill-card card-item">
@@ -221,20 +249,12 @@
               </div>
             </div>
             <div class="description">
-              <h1>Iswan Ariyanto <span>21'</span></h1>
+              <h1>Iswan Ariyanto <span>25'</span></h1>
               <p>
-                Seorang pemuda <b>21 tahun</b> yang berasal dari polosok salah satu kota yang ada di provinsi Sulawesi-Selatan, berangkat ke kota besar untuk menuntut ilmu demi memenuhi harapan orang tua untuk menjadi manusia yang dapat
-                berguna bagi orang banyak. Beberapa aktifitas yang sedang gemar saya jalani saat ini yaitu berolahraga, ngoding, mendengarkan musik, serta mengunjungi tempat-tempat wisata yang belum diketahui oleh banyak orang.<br />
-                <span> Apakah hanya segitu saja detail tentang kehidupan saya? Tentu tidak... </span>
+                Frelancer <b>25 tahun</b> kota asal kabupaten bantaeng provinsi Sulawesi-Selatan. Main job saya saat ini yaitu sebagai <b>staff di salah satu instansi pemerintah</b> dengan jabatan <b>operator</b>. Beberapa aktifitas yang sedang gemar saya jalani saat ini yaitu berolahraga, koding, mendengarkan musik, dan traveling. Menjadi seorang frelancer merupakan bagian dari kerjaan sampingan yang sedang saya tekuni saat ini, pekerjaan yang sudah saya jalani sejak masih di bangku kuliah. saya rutin mengambil beberapa projekan untuk teman-teman mahasiswa sebagai tambahan pengalaman untuk bisa lebih prepare dalam menjalin hubungan bekerja kedepannya dengan orang yang lebih banyak.<br />
               </p>
             </div>
           </aside>
-          <article>
-            Saat ini saya sedang menempuh pendidikan di salah satu perguruan tinggi swasta yang ada di Bandung, <b>Telkom University</b> menjadi pilihan utama saya untuk menambah ilmu sebagai penunjang karir saya kedepannya. menjadi seorang
-            engineer adalah cita-cita saya sejak lama sehingga saya mengambil jurusan D3 Teknik Komputer untuk dapat meningkatkan keberhasilan saya dalam meraih cita-cita tersebut. saya masuk pada tahun 2017 dan berhasil menyelesaikan studi
-            saya pada tahun 2020 dengan status "Sangat Memuaskan", saat ini saya sedang menempuh pendidikan lanjutan (ekstensi) dengan jurusan yang sama yaitu S1 Teknik Komputer Fakultas Teknik Elektro... Mungkin segitu saja yang dapat saya
-            ceritakan, Terimakasih...
-          </article>
         </section>
       </div>
       <div class="footer" id="contact">
@@ -246,29 +266,31 @@
     
     <script src="assets/js/jquery-3.5.1.js"></script>
     <script src="assets/js/owl.carousel.min.js"></script>
-    
-    <script type="text/javascript">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmltypist.js/dist/typist.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+      AOS.init();
       $(document).ready(function(){
-        var owl = $('.owl-carousel');
+        const owl = $('.owl-carousel');
         owl.owlCarousel({
           loop:true,
           dots: false,
           autoplay:true,
           pagination: false,
+          nav: false,
+          center: true,
+          autoplayHoverPause: true,
           responsiveClass:true,
           responsive:{
             0:{
                 items:1,
-                nav:true
             },
             600:{
-                items:3,
-                nav:false
+                items:2,
             },
             1000:{
                 items:4,
-                nav:false,
-                loop:true
             }
           }
         });
@@ -276,10 +298,9 @@
             owl.trigger('next.owl.carousel');
         })
         $('.nav-prev').click(function() {
-            owl.trigger('prev.owl.carousel', [300]);
+            owl.trigger('prev.owl.carousel', [200]);
         });
       });
     </script>
-    <!-- <script src="assets/js/script.js"></script> -->
   </body>
 </html>
