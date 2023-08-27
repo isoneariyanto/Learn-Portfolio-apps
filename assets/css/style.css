@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300;1,400;1,600&family=Poly:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,400;1,100;1,200;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* Scroll bar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -21,19 +21,30 @@
 }
 
 :root {
+  --color-shadow: #aaaaaa;
   --banner-job-color: #ff3e07;
   --content-1st-bg: #fff;
-  --content-2nd-bg: #ececea;
+  --content-2nd-bg: #F4F4F4;
+  --content-3rd-bg: #1C2143;
+  --content-4th-bg: #303030;
+  --content-5th-bg: #212121;
   --nav-item-color: #030303;
   --nav-item-color-hover: #ff3e07;
+  --color-txt-smoke: #dadada4b;
+  --color-txt-1st: #1C2143;
+  --color-txt-2nd: #D1C01D;
+  --color-txt-3nd: #303030;
 }
 
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  font-family: "Poppins", "Poly";
+  font-family: "Roboto", "Poppins";
 }
-
+h1,h2,h3,h4,h5,h6{
+  margin: 0px;
+  padding: 0px;
+}
 body {
   margin: 0;
   padding: 0;
@@ -52,7 +63,7 @@ header > nav.navbar {
   padding: 0px 90px;
   position: sticky;
   bottom: 0;
-  box-shadow: 0px 0.5px 20px 8px #ececea;
+  box-shadow: 0px 0px 15px var(--color-shadow);
 }
 .navbar .navbar-brand {
   flex-grow: 1;
@@ -88,16 +99,15 @@ ul {
 }
 
 .navbar .navbar-menu ul.nav .nav-item > a {
-  color: #000;
+  color: var(--color-txt-3nd);
   font-size: 12pt;
   font-weight: 500;
   text-decoration: none;
 }
-.navbar .navbar-menu ul.nav .nav-item > a:hover {
-  transition: color 0.5s;
+.nav-item a > span {
+  transition: color 0.5s ease-in-out;
 }
-
-.nav-item.active a > span {
+.nav-item a:hover > span {
   color: var(--nav-item-color-hover);
 }
 /* ------------ Main Element Css Code  ---------------- */
@@ -112,147 +122,239 @@ main .content {
 }
 
 /* ------------  Banner Element Css COde --------------*/
-main .content .content-banner {
+main .content .banner {
+  height: 90vh;
   display: flex;
   align-items: center;
-  border-bottom: 3px solid var(--content-2nd-bg);
 }
-main .content .content-banner .banner-body {
+.banner .banner-left,
+.banner .banner-right {
   display: flex;
-  flex-direction: row;
-}
-.banner-body .banner-left {
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 2;
   padding: 10px;
-  width: 5%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.banner-left > a > img {
-  width: 30px;
-}
-.banner-left > a > img:hover {
-  transition: all 0.6s;
-  width: 40px;
-}
-main .content .content-banner .banner-center {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
   position: relative;
-  width: 45%;
-  padding: 0px 20px 0px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-/* main .content .content-banner .banner-center .text h2,
-main .content .content-banner .banner-center .text h1,
-main .content .content-banner .banner-center .text p {
+.text > h1{
+  text-align: center;
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.banner .banner-left .sosmed-container{
   position: absolute;
-} */
-main .content .content-banner .banner-center .text h2 {
-  color: var(--banner-job-color);
+  bottom: 20px;
 }
-main .content .content-banner .banner-center .text h1 {
-  /* line-height: 20px; */
-  font-size: 30pt;
+.banner .banner-left .sosmed-container > a > img {
+  width: 40px;
+  transition: all 0.6s ease-in-out;
 }
-main .content .content-banner .banner-right {
-  width: 50%;
-  background-image: url(../image/vector-creator4_crop.png);
+.banner .banner-left .sosmed-container > a > img:hover {
+  transform: translateY(-10px);
+}
+
+main .content .banner .banner-center {
+  flex-basis: 1;
+  width: 100%;
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 75%;
   display: flex;
   align-items: top;
-  /* padding: 40px; */
   justify-content: center;
 }
 
-main .content .content-banner .banner-right .me {
-  width: 330px;
+/* ----------------- CSS CONTENT PROJECT --------------------*/
+.project{
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--content-3rd-bg);
+    color: #ffffff;
+    position: relative;
 }
-/* ----------------- CSS CONTENT SKILL --------------------*/
-main .content .content-skills {
-  padding: 20px;
+.project .project-description{
+  padding: 60px;
+  height: 130vh;
   display: flex;
-  flex-direction: column;
-  background-color: var(--content-1st-bg);
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+.rectangle-bg{
+  position: absolute;
+  top: -8%;
+  right: -10%;
+  transform: rotate(-22deg);
+  width: 70%;
+  height: 70%;
+  background-color: #ffffff;
 }
 
-#skills .header {
+.description-left, .description-right{
+  z-index: 99;
+  width: 50%;
+  position: relative;
+}
+
+.section-title-text{
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.section-title-underline{
+  height: 2px;
+  display: flex;
+}
+.project .section-title-underline{
+  width: 100px;
+  background-color: #F4F4F4;
+}
+.text-block{
+  font-size: 250px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  display: block;
+}
+.section-description .section-description-title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.section-description .section-description-text{
+  font-size: 24px;
+  font-weight:300;
+}
+
+.description-left .text-block{
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  transform: translateY(-50%);
+  -webkit-text-stroke-color: var(--color-txt-smoke);
+}
+.description-left .section-description{
+  width: 70%;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-65%);
+}
+
+.description-right{
+  color: var(--color-txt-1st);
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  height: fit-content;
+  margin-top: 40px;
 }
-#skills .header > p {
-  margin: 0;
+.description-right .section-description{
   width: 70%;
 }
 
-.content-skills .body {
-  padding: 30px 130px;
-}
-
-.glide .glide__slide {
-  background-color: #eeeeee;
+.card-nav{
   display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  box-shadow: 1px 1px 10px 2px #d4d4d4;
-}
-.glide .glide__slide > img {
-  width: 150px;
-  height: 150px;
-}
-
-.glide .glide__slide .overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-radius: 8px;
   position: absolute;
-  background-color: rgba(115, 119, 119, 0.815);
-  transition: height 0.5s ease-in-out;
+  bottom: 20%;
+  right: 4%;
+  transform: translateX(-20%);
+}
+.card-nav-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0px 5px;
+  background-color: var(--content-2nd-bg);
+  color: var(--color-txt-2nd);
+  font-size: 20px;
+  cursor: pointer;
 }
 
-.glide__slide .overlay > h3 {
-  font-size: 30pt;
-  font-weight: 300;
-  font-family: "Polly";
-  display: none;
-  color: #fff;
-  transition: all ease 0.5s;
+.project .project-list{
+  width: 90%;
+  position: absolute;
+  display: flex;
+  bottom: -10% !important;
+  left: 50% !important;
+  transform: translate(-50%, 10%);
 }
-.glide .glide__slide:hover .overlay {
+.owl-stage{
+  padding: 10px 0px;
+}
+
+.card-item{
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--content-1st-bg);
+  box-shadow: 0px 0px 10px var(--color-shadow);
+}
+
+.project-card{
+  width: 290px;
+  height: 230px;
+}
+
+/* ----------------- CSS CONTENT SKILL --------------------*/
+.skills {
+  padding: 200px 60px 60px 60px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--content-2nd-bg);
+}
+
+.skill-title{
   width: 100%;
-  height: 100%;
-}
-.glide__slide:hover .overlay > h3 {
-  display: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: var(--color-txt-3nd);
 }
 
-.glide .glide__arrows button {
-  color: rgb(212, 212, 212);
+.skills .section-title-underline{
+  width: 50px;
+  background-color: var(--color-txt-3nd);
+}
+
+.skill-list{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  height: 240px;
+  border: 1px solid var(--color-txt-1st);
+  color: var(--color-txt-1st);
+  box-shadow: 0px 0px 10px var(--content-3rd-bg);
+}
+.card-item-header{
+  margin-bottom: 20px;
+  text-align: center;
+}
+.card-item-body{
+  overflow-y: auto;
+}
+.card-icon{
   font-size: 40px;
-  border: none;
-}
-.glide .glide__arrows button:hover {
-  color: #524949;
-  transition: color 0.5s;
-}
-#skills .header > h1,
-#gallery .header > h1 {
-  letter-spacing: 3px;
-  font-weight: 400;
-  font-size: 28pt;
 }
 
 /* -------- PARALAX Css Code ----------*/
@@ -285,7 +387,6 @@ main .content .content-skills {
 
 /* ---------- Gallery Code ------------- */
 .content-gallery {
-  background-color: white;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -308,22 +409,21 @@ main .content .content-skills {
   display: flex;
   flex-direction: row;
   padding: 10px;
-  /* box-shadow: 2px 2px 10px 10px var(--content-2nd-bg); */
 }
-#gallery .body .column {
+#gallery .body .columns {
   display: flex;
   flex-direction: column;
   width: 50%;
 }
-/* Create four equal columns that sits next to each other */
-#gallery .body .column .row {
-  padding: 5px;
+
+#gallery .body .columns .rows {
+  padding: 10px;
   display: flex;
   align-items: center;
-  box-shadow: 3px 3px 4px 5px var(--content-2nd-bg);
+  box-shadow: 0px 0px 10px var(--color-shadow);
 }
 
-#gallery .body .column .row > img {
+#gallery .body .columns .rows > img {
   width: 100%;
 }
 
@@ -385,47 +485,16 @@ main .content .content-skills {
 /* --------- Footer Css Code ------------ */
 .footer {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 270px;
-}
-
-.footer .content-footer {
-  background-color: #524949;
-  flex-grow: 2;
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer .content-footer .item {
-  padding: 0px 15px;
-  color: #fff;
-  width: 30%;
-}
-.footer .content-footer .quote > q {
-  font-family: "Polly";
-  letter-spacing: 2px;
-}
-.footer .content-footer .item:nth-child(1) {
-  width: 40%;
-  display: flex;
-  align-items: center;
-}
-
-.footer .cp {
-  background-color: #544d4d;
-  flex-grow: 1;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-color: var(--content-4th-bg);
+  padding: 20px;
 }
-.footer .cp p {
+.footer p {
   display: inline;
-  color: #b4b0aa;
-  font-size: 10pt;
+  color: var(--content-1st-bg);
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 1024px) {
