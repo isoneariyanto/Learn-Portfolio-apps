@@ -235,14 +235,17 @@ main .content {
   margin-bottom: 20px;
 }
 
+.banner .banner-merge .sosmed-container,
 .banner .banner-left .sosmed-container{
   position: absolute;
   bottom: 20px;
 }
+.banner .banner-merge .sosmed-container > a > img,
 .banner .banner-left .sosmed-container > a > img {
   width: 40px;
   transition: all 0.6s ease-in-out;
 }
+.banner .banner-merge .sosmed-container > a > img:hover,
 .banner .banner-left .sosmed-container > a > img:hover {
   transform: translateY(-10px);
 }
@@ -254,6 +257,11 @@ main .content {
     flex-basis: 1;
     z-index: 99;
   }
+  
+.banner .banner-merge .sosmed-container{
+  left: 50%;
+  transform: translateX(-50%);
+}
   .banner .banner-left,
   .banner .banner-right{
     display: none;
